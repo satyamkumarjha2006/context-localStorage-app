@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { ContextTodoProvider } from './Contexts/Context';
 import TodoForm from './Components/TodoForm';
 import TodoItem from './Components/TodoItem';
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
     const [todos , setTodos] = useState([]) 
@@ -54,6 +55,7 @@ function App() {
                         ))}
                     </div>
                 </div>
+                <Analytics/>
             </div>
             </ContextTodoProvider>
      );
